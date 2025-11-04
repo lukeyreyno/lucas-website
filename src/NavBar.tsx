@@ -1,3 +1,4 @@
+import { SITE_OWNER } from './config';
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
@@ -96,7 +97,7 @@ const NavBar: React.FC = () => {
   return (
     <nav className="navbar" ref={navbarRef}>
       <div className="navbar-container">
-        <Link to="/" onClick={hideNavDropdown} className="navbar-logo">Lucas Reyna</Link>
+  <Link to="/" onClick={hideNavDropdown} className="navbar-logo">{SITE_OWNER}</Link>
         <button className="navbar-toggle" onClick={toggleNavVisibility}>☰</button>
         {!isSmallScreen && navBarLinksContainer()}
       </div>
