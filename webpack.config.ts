@@ -1,11 +1,8 @@
 
 import {fileURLToPath} from 'url';
 import path from 'path';
-
-import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
-
 import {SITE_OWNER} from './site.config.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -60,21 +57,7 @@ const config: webpack.Configuration = {
     }),
     new webpack.DefinePlugin({
       SITE_OWNER: JSON.stringify(SITE_OWNER)
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'public',
-          to: '.',
-          globOptions: {
-            ignore: [
-              '**/index.html',
-              '**/favicon.ico'
-            ]
-          }
-        }
-      ]
-    }),
+    })
   ],
   devServer: {
     static: {
