@@ -1,10 +1,10 @@
-
 import {fileURLToPath} from 'url';
 import path from 'path';
 
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack, {type Configuration} from 'webpack';
+import 'webpack-dev-server'
 
 import {SITE_OWNER} from './site.config.js';
 
@@ -75,7 +75,7 @@ const config: Configuration = {
         }
       ]
     })
-  ] as Configuration['plugins'],
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
