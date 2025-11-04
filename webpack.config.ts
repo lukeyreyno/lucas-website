@@ -4,14 +4,14 @@ import path from 'path';
 
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import webpack from 'webpack';
+import webpack, {type Configuration} from 'webpack';
 
 import {SITE_OWNER} from './site.config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const config: webpack.Configuration = {
+const config: Configuration = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -74,8 +74,8 @@ const config: webpack.Configuration = {
           }
         }
       ]
-    }),
-  ],
+    })
+  ] as Configuration['plugins'],
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
