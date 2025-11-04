@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding-top: var(--navbar-height);
+}
+
+.headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: 'Goldman', Arial, Helvetica, sans-serif;
+}
+
+.bio {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  color: #666;
+  max-width: 600px;
+  margin: 20px;
+}
