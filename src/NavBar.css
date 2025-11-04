@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+:root {
+  --navbar-height: 60px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -moz-user-select: none;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  min-height: var(--navbar-height);
+  font-family: 'Goldman', Arial, Helvetica, sans-serif;
+}
+
+.navbar-logo {
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links-container.hidden {
+  display: none;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25em;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #00bcd4;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5em;
+  cursor: pointer;
+}
